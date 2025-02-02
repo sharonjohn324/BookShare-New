@@ -89,25 +89,6 @@ Install required dependencies: Install Express.js for handling API requests and 
 npm install express firebase-admin
 Create a backend server (index.js): In the bookshare-backend directory, create a new file index.js with the following content:
 
-const express = require('express');
-const admin = require('firebase-admin');
-
-// Initialize Firebase Admin SDK
-admin.initializeApp({
-credential: admin.credential.applicationDefault(),
-});
-
-const app = express();
-app.use(express.json());
-
-app.get('/', (req, res) => {
-res.send('BookShare API is running');
-});
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-console.log(`Server running on port ${PORT}`);
-});
 Set up Firebase Admin SDK: Follow the official Firebase Admin SDK setup to configure your Firebase project for backend interactions.
 
 Start the backend server:
@@ -158,10 +139,10 @@ For Software:
 
 # Screenshots
 
-![Screenshot1](./dist/assets/2.png)
+![Screenshot1](./2.png)
 *Homepage of BookShare showing the main interface and navigation options*
 
-![Screenshot2](./dist/assets/1.png)
+![Screenshot2](./1.png)
 *Book listing page displaying available second-hand books with details*
 
 # Build Photos
